@@ -1,0 +1,172 @@
+{
+  "burger": [
+    {
+      "id": 0,
+      "name": "Классический бургер",
+      "price": 440,
+      "delivery": true,
+      "img": "img/burger/1.png"
+    },
+    {
+      "id": 1,
+      "name": "Бургер 4 сыра",
+      "price": 540,
+      "delivery": true,
+      "img": "img/burger/1.png"
+    },
+    {
+      "id": 2,
+      "name": "Бургер бруклин",
+      "price": 640,
+      "delivery": true,
+      "img": "img/burger/1.png"
+    },
+    {
+      "id": 3,
+      "name": "Альпачино",
+      "price": 350,
+      "delivery": true,
+      "img": "img/burger/1.png"
+    },
+    {
+      "id": 4,
+      "name": "Сырный бро",
+      "price": 460,
+      "delivery": true,
+      "img": "img/burger/1.png"
+    },
+    {
+      "id": 5,
+      "name": "Ронни",
+      "price": 480,
+      "delivery": true,
+      "img": "img/burger/1.png"
+    },
+    {
+      "id": 6,
+      "name": "Чикаго",
+      "price": 560,
+      "delivery": true,
+      "img": "img/burger/1.png"
+    }
+  ],
+  "twister": [
+    {
+      "id": 7,
+      "name": "Твистер-1",
+      "price": 350,
+      "delivery": true,
+      "img": "img/twister/1.png"
+    },
+    {
+      "id": 8,
+      "name": "Твистер-2",
+      "price": 200,
+      "delivery": true,
+      "img": "img/twister/1.png"
+    },
+    {
+      "id": 9,
+      "name": "Твистер-3",
+      "price": 280,
+      "delivery": true,
+      "img": "img/twister/1.png"
+    },
+    {
+      "id": 10,
+      "name": "Твистер-4",
+      "price": 333,
+      "delivery": true,
+      "img": "img/twister/1.png"
+    }
+  ],
+  "chicken": [
+    {
+      "id": 11,
+      "name": "Курица-1",
+      "price": 440,
+      "delivery": true,
+      "img": "img/chicken/1.png"
+    },
+    {
+      "id": 12,
+      "name": "Курица-2",
+      "price": 440,
+      "delivery": true,
+      "img": "img/chicken/1.png"
+    },
+    {
+      "id": 13,
+      "name": "Курица-3",
+      "price": 440,
+      "delivery": true,
+      "img": "img/chicken/1.png"
+    },
+    {
+      "id": 14,
+      "name": "Курица-4",
+      "price": 440,
+      "delivery": true,
+      "img": "img/chicken/1.png"
+    }
+  ],
+  "categories": [
+    {
+      "id": 101,
+      "name": "Бургеры",
+      "products": [0, 1, 2, 3, 4, 5, 6]
+    },
+    {
+      "id": 102,
+      "name": "Твистеры",
+      "products": [7, 8, 9, 10]
+    },
+    {
+      "id": 103,
+      "name": "Курица",
+      "products": [11, 12, 13, 14]
+    },
+    {
+      "id": 104,
+      "name": "Баскеты",
+      "products": []
+    },
+    {
+      "id": 105,
+      "name": "Снэки",
+      "products": []
+    },
+    {
+      "id": 106,
+      "name": "Соусы",
+      "products": []
+    },
+    {
+      "id": 107,
+      "name": "Напитки",
+      "products": []
+    },
+    {
+      "id": 108,
+      "name": "Кофе и чай",
+      "products": []
+    },
+    {
+      "id": 109,
+      "name": "Десерты",
+      "products": []
+    },
+    {
+      "id": 110,
+      "name": "Хиты по 50",
+      "products": []
+    },
+    {
+      "id": 111,
+      "name": "Хиты по 100",
+      "products": []
+    }
+  ]
+}
+
+
