@@ -3,11 +3,13 @@ import thunk from 'redux-thunk';
 import burger from "./reducers/burger";
 import twister from "./reducers/twister";
 import chicken from "./reducers/chicken";
+import basket from "./reducers/basket"
 
 const rootReducer = combineReducers({
     burger,
     twister,
-    chicken
+    chicken,
+    basket,
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

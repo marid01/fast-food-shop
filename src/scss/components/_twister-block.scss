@@ -1,0 +1,32 @@
+.content__items-twister{
+  padding: 40px 0 56px;
+  background-color: #fff;
+  &__inner {
+    display: flex;
+   justify-content: space-between;
+  }
+}
+
+.twister-block {
+  font-weight: 400;
+  font-size: 24px;
+  width: 288px;
+  height: 360px;
+  transition: transform .3s;
+  &:hover {
+    background-color: #F7F6F5;
+    .twister-block__image {
+      transform: scale(1.1);
+    }
+  }
+}
+.twister-block__inner {
+  display: block;
+  text-align: center;
+}
+
+.twister-block__image {
+  display: block;
+  margin: 0 auto;
+  transition: transform .3s;
+}

@@ -1,0 +1,30 @@
+.button-basket {
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+  height: 40px;
+  border-radius: 100px;
+  padding: 0 1px;
+  border: none;
+  background-color: $black;
+  position: absolute;
+  top: 149px;
+  left: 194px;
+  button {
+    width: 40px;
+      height: 40px;
+      line-height: 0;
+      border-radius: 50%;
+      border: none;
+    &:not(:disabled):active {
+      background-color: #333;
+      border: unset;
+    }
+    border: none;
+    background: transparent;
+  }
+  &__num {
+    color: #fff;
+    padding-top: 3px;
+  }
+}

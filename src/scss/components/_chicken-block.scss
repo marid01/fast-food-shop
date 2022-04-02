@@ -1,0 +1,32 @@
+.content__items-chicken{
+  padding: 40px 0 448px;
+  background-color: #F7F6F5;;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.chicken-block {
+  font-weight: 400;
+  font-size: 24px;
+  width: 288px;
+  height: 360px;
+  transition: transform .3s;
+  &:hover {
+    background-color: #FFFFFF;
+    .chicken-block__image {
+      transform: scale(1.1);
+    }
+  }
+}
+.chicken-block__inner {
+  display: block;
+  text-align: center;
+}
+
+.chicken-block__image {
+  display: block;
+  margin: 0 auto;
+  transition: transform .3s;
+}

@@ -1,11 +1,10 @@
 import React from "react";
-import classes from "./Header.module.css";
 
 function Header() {
     return (
-        <div className={classes.header}>
-            <div className={classes.container}>
-                <div className={classes.deliveryTitle}>
+        <div className="header">
+            <div className="container">
+                <div>
                     Доставка г. Москва
                 </div>
             </div>

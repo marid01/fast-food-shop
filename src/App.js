@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './scss/App.scss';
 import Header from './components/Header/Header';
 import {Route, Routes} from 'react-router-dom'
 import Home from "./pages/Home/Home";
@@ -7,7 +7,6 @@ import Home from "./pages/Home/Home";
 function App() {
     return (
         <div className="wrapper">
-            <Header/>
             <div className="content">
                 <Routes>
                     <Route path="/" element={<Home/>}/>
