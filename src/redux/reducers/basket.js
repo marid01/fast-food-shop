@@ -4,26 +4,33 @@ const initialState = {
     totalCount: 0,
 };
 
+const getTotalPrice = (arr) => arr.reduce((sum, obj) => obj.price + sum, 0);
+
 const basket = (state = initialState, action) => {
     switch (action.type) {
         case 'ADD_ITEMS_BASKET': {
-            const currentPizzaItems = !state.items[action.payload.id]
+            const currentItems = !state.items[action.payload.id]
                 ? [action.payload]
                 : [...state.items[action.payload.id].items, action.payload];
-
+            console.log('current items', currentItems)
             const newItems = {
                 ...state.items,
                 [action.payload.id]: {
-                    items: currentPizzaItems,
+                    items: currentItems,
+                    totalPrice: getTotalPrice(currentItems)
                 },
             };
-
+            console.log(newItems);
+            const totalPrice = Object.keys(newItems).reduce(
+                (sum, key) => newItems[key].totalPrice + sum, 0
+            );
             return {
                 ...state,
                 items: newItems,
+                totalPrice
             };
-        }
 
+        }
         case 'MINUS_BASKET_ITEM': {
             const oldItems = state.items[action.payload].items;
             const newObjItems =

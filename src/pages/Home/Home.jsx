@@ -12,6 +12,7 @@ function Home() {
     const itemsTwister = useSelector(({twister}) => twister.items);
     const itemsChicken = useSelector(({chicken}) => chicken.items);
     const basketItems = useSelector(({basket}) => basket.items)
+    const totalPrice = useSelector(({basket}) => basket.totalPrice)
 
     const dispatch = useDispatch()
 
@@ -34,7 +35,7 @@ function Home() {
                 <div className="container">
                    <div className="basket-header__inner">
                        <a className="basket">
-                           <div className="basket__count">327₽</div>
+                           <div className="basket__count">{totalPrice}₽</div>
                            <div className="basket__svg">
                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                    <path d="M12 4.56205L7.76825 9.64018C7.41468 10.0645 6.78412 10.1218 6.35984 9.76822C5.93556 9.41466 5.87824 8.78409 6.2318 8.35982L11.2318 2.35982C11.6316 1.88006 12.3685 1.88006 12.7682 2.35982L17.7682 8.35982C18.1218 8.78409 18.0645 9.41466 17.6402 9.76822C17.2159 10.1218 16.5854 10.0645 16.2318 9.64018L12 4.56205Z" fill="#F7F6F5"/>
