@@ -26,16 +26,24 @@ function BurgerBlock({id, name, img, price, onClickAddItems, addedCount, onMinus
 
 
     return (
-       <div className="burger-block">
-           <div className="container">
-               <div className="burger-block__inner">
-                   <img className="burger-block__image" src={img} alt="Бургер"/>
-                   <h4>{name}</h4>
-                   <div className="burger-block__price">{price}</div>
-                   {buttonStatus ? <Button onClick={onAddItems} changeButtonStatus={changeButtonStatus}/> : <ButtonBasket id={id} onClick={onAddItems} onMinusItem={onMinusItem} addedCount={addedCount}/>}
-               </div>
-           </div>
-       </div>
+        <div className="burger-block">
+            <div className="container">
+                <div className="burger-block__inner">
+                    <img className="burger-block__image" src={img} alt="Бургер"/>
+                    <h4>{name}</h4>
+                    <div className="burger-block__price">{price}</div>
+                    {buttonStatus ?
+                        <Button onClick={onAddItems} changeButtonStatus={changeButtonStatus}/>
+                        : <ButtonBasket
+                            id={id}
+                            onClick={onAddItems}
+                            onMinusItem={onMinusItem}
+                            addedCount={addedCount}
+                            setButtonStatus={setButtonStatus}/>
+                    }
+                </div>
+            </div>
+        </div>
     );
 }
 

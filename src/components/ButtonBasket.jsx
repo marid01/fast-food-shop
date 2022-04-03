@@ -1,9 +1,13 @@
 import React from 'react';
 
-function ButtonBasket({id, onClick, addedCount, onMinusItem}) {
+function ButtonBasket({id, onClick, addedCount, onMinusItem, setButtonStatus}) {
     const handleMinusItem = () => {
         onMinusItem(id)
+        if(addedCount === 1) {
+            setButtonStatus(true)
+        }
     };
+    console.log(addedCount)
     return (
         <div className="button-basket">
             <button onClick={handleMinusItem} className="button-basket-minus">

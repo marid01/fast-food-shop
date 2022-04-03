@@ -34,17 +34,23 @@ const basket = (state = initialState, action) => {
         case 'MINUS_BASKET_ITEM': {
             const oldItems = state.items[action.payload].items;
             const newObjItems =
-                oldItems.length > 1 ? state.items[action.payload].items.slice(1) : oldItems;
+                oldItems.length > 0 ? state.items[action.payload].items.slice(1) : oldItems;
             const newItems = {
                 ...state.items,
                 [action.payload]: {
-                    items: newObjItems
+                    items: newObjItems,
+                    totalPrice: getTotalPrice(newObjItems),
                 },
             };
 
+            const totalPrice = Object.keys(newItems).reduce(
+                (sum, key) => newItems[key].totalPrice + sum, 0
+            );
+
             return {
                 ...state,
-                items: newItems
+                items: newItems,
+                totalPrice
             };
         }
 
