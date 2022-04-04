@@ -1,0 +1,25 @@
+.delivery-block__inner {
+  display: flex;
+  justify-content: end;
+}
+
+.delivery {
+
+}
+
+.btn {
+  font-family: 'Abel', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 17px;
+  border: none;
+  background: #F7F6F5;
+  color: #9D9D9D;
+  border-radius: 4px;
+}
+.active {
+  background: #E4002B;
+  color: #FFFFFF;
+}

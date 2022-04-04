@@ -6,6 +6,7 @@ import TwisterBlock from "../../components/TwisterBlock/TwisterBlock";
 import ChickenBlock from "../../components/ChickenBlock/ChickenBlock";
 import {fetchChicken} from "../../redux/actions/chicken";
 import {fetchTwister} from "../../redux/actions/twister";
+import DeliveryBlock from "../../components/DeliveryBlock";
 
 function Home() {
     const itemsBurger = useSelector(({burger}) => burger.items);
@@ -30,7 +31,7 @@ function Home() {
     };
 
     return (
-        <div className="content">
+        <div className="main">
             <div className="basket-header">
                 <div className="container">
                    <div className="basket-header__inner">
@@ -44,6 +45,13 @@ function Home() {
                            </div>
                        </a>
                    </div>
+                </div>
+            </div>
+            <div className="delivery-block">
+                <div className="container">
+                    <div className="delivery-block__inner">
+                        <DeliveryBlock/>
+                    </div>
                 </div>
             </div>
             <div className="content__items-burger">
