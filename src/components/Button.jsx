@@ -1,9 +1,11 @@
 import React from 'react';
+import {useDispatch} from "react-redux";
 
-function Button({onClick,changeButtonStatus }) {
+function Button({onAddItems,changeButtonStatus }) {
+    const dispatch = useDispatch()
     const changeStatusButton = () => {
        changeButtonStatus(false);
-        onClick()
+        onAddItems()
     }
     return (
         <div>

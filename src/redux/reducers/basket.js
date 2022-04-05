@@ -1,7 +1,7 @@
 const initialState = {
     items: {},
     totalPrice: 0,
-    totalCount: 0,
+    buttonStatus: true
 };
 
 const getTotalPrice = (arr) => arr.reduce((sum, obj) => obj.price + sum, 0);
@@ -12,7 +12,7 @@ const basket = (state = initialState, action) => {
             const currentItems = !state.items[action.payload.id]
                 ? [action.payload]
                 : [...state.items[action.payload.id].items, action.payload];
-            console.log('current items', currentItems)
+            // console.log('current items', currentItems)
             const newItems = {
                 ...state.items,
                 [action.payload.id]: {
@@ -20,7 +20,7 @@ const basket = (state = initialState, action) => {
                     totalPrice: getTotalPrice(currentItems)
                 },
             };
-            console.log(newItems);
+            // console.log(newItems);
             const totalPrice = Object.keys(newItems).reduce(
                 (sum, key) => newItems[key].totalPrice + sum, 0
             );
@@ -54,6 +54,16 @@ const basket = (state = initialState, action) => {
             };
         }
 
+        case 'CLEAR_BASKET':
+            return {items: {}, totalPrice: 0}
+
+        case 'BUTTON_STATUS' : {
+            return {
+                ...state,
+                buttonStatus: action.payload
+            }
+        }
+
         default:
             return state;
     }
@@ -64,9 +74,19 @@ export const addItemsToBasket = (obj) => ({
     type: 'ADD_ITEMS_BASKET',
     payload: obj
 })
+
 export const minusBasketItem = (id) => ({
     type: 'MINUS_BASKET_ITEM',
     payload: id,
+});
+
+export const clearBasket = () => ({
+    type: 'CLEAR_BASKET'
+});
+
+export const buttonStatus = (boolean) => ({
+    type: 'BUTTON_STATUS',
+    payload: boolean,
 });
 
 export default basket;

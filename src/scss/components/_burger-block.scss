@@ -9,17 +9,24 @@
 }
 .basket {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0 10px;
-  width: 82px;
+  padding: 0 3px;
+  width: 94px;
   height: 36px;
   border-radius: 18px;
   background: $red;
+  border: none;
+  &:not(:disabled):active {
+    background-color: #333;
+    border: unset;
+  }
   &__count {
+    font-family: "Barlow Condensed", sans-serif;
     font-size: 20px;
     line-height: 25px;
     color: #FFFFFF;
+    padding: 6px;
   }
 }
 

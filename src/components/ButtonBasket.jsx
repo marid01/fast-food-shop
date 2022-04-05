@@ -7,7 +7,6 @@ function ButtonBasket({id, onClick, addedCount, onMinusItem, setButtonStatus}) {
             setButtonStatus(true)
         }
     };
-    console.log(addedCount)
     return (
         <div className="button-basket">
             <button onClick={handleMinusItem} className="button-basket-minus">

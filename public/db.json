@@ -4,7 +4,7 @@
       "id": 0,
       "name": "Классический бургер",
       "price": 440,
-      "delivery": true,
+      "delivery": false,
       "img": "img/burger/1.png"
     },
     {
@@ -18,7 +18,7 @@
       "id": 2,
       "name": "Бургер бруклин",
       "price": 640,
-      "delivery": true,
+      "delivery": false,
       "img": "img/burger/1.png"
     },
     {
@@ -32,7 +32,7 @@
       "id": 4,
       "name": "Сырный бро",
       "price": 460,
-      "delivery": true,
+      "delivery": false,
       "img": "img/burger/1.png"
     },
     {
