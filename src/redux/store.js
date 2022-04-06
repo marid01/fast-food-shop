@@ -5,13 +5,15 @@ import twister from "./reducers/twister";
 import chicken from "./reducers/chicken";
 import basket from "./reducers/basket"
 import order from "./reducers/order"
+import filters from "./reducers/filters";
 
 const rootReducer = combineReducers({
     burger,
     twister,
     chicken,
     basket,
-    order
+    order,
+    filters
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

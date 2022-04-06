@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useFormik} from "formik";
 import {addOrder, addOrderBool} from "../redux/reducers/order";
 import {buttonStatus, clearBasket} from "../redux/reducers/basket";
+import {setCategory} from "../redux/reducers/filters";
 
 function DeliveryBlock(props) {
     const order = useSelector(({basket}) => basket.items);
@@ -14,10 +15,12 @@ function DeliveryBlock(props) {
 
     const onSelectBtnDelivery = () => {
         setActiveType(true);
+        dispatch(setCategory(null))
     };
 
     const onSelectBtnPickup = () => {
         setActiveType(false);
+        dispatch(setCategory(true))
     };
 
     const fetchSort = () => {

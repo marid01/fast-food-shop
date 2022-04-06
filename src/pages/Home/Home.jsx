@@ -14,15 +14,16 @@ function Home() {
     const itemsChicken = useSelector(({chicken}) => chicken.items);
     const basketItems = useSelector(({basket}) => basket.items);
     const totalPrice = useSelector(({basket}) => basket.totalPrice);
+    const delivery = useSelector(({filters}) => filters.category);
 
 
     const dispatch = useDispatch()
 
     useEffect(() => {
-        dispatch(fetchBurger());
+        dispatch(fetchBurger(delivery));
         dispatch(fetchChicken());
         dispatch(fetchTwister());
-    }, [])
+    }, [delivery])
 
     // const onSelectCategory = (index) => {
     //     dispatch(setCategory(true));

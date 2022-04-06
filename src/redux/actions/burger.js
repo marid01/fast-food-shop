@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-export const fetchBurger = () => (dispatch) => {
-    axios.get('http://localhost:3001/burger')
+export const fetchBurger = (delivery) => (dispatch) => {
+    axios.get(`http://localhost:3001/burger?${delivery !== null ? `delivery=${delivery}` : '' } `)
         .then(({ data }) => {
             dispatch(setBurger(data));
         });
