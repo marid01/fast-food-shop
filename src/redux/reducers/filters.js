@@ -1,5 +1,5 @@
 const initialState = {
-    category: true,
+    category: null,
 };
 
 const filters = (state = initialState, action) => {

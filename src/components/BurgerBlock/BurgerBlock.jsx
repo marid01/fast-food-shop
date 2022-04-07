@@ -7,14 +7,13 @@ import {minusBasketItem} from "../../redux/reducers/basket";
 function BurgerBlock({id, name, img, price, onClickAddItems, addedCount}) {
     const dispatch = useDispatch()
     const order = useSelector(({basket}) => basket.items);
-    const buttonStatusR = useSelector(({basket}) => basket.buttonStatus);
     const [buttonStatus, setButtonStatus] = useState(true)
     const changeButtonStatus = (boolean) => {
         setButtonStatus(boolean)
     }
 
     useEffect(() => {
-        if (Object.keys(order).length == 0) {
+        if (Object.keys(order).length === 0) {
             setButtonStatus(true)
         }
     },[order])

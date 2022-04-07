@@ -1,5 +1,6 @@
 const initialState = {
     items: [],
+    itemsCategory: [],
     isLoaded: false,
 };
 
@@ -10,6 +11,12 @@ const burger = (state = initialState, action) => {
                 ...state,
                 items: action.payload,
                 isLoaded: true,
+            };
+
+        case 'SET_CATEGORIES':
+            return {
+                ...state,
+                itemsCategory: action.payload
             };
 
         default:

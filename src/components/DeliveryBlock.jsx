@@ -8,24 +8,22 @@ import {setCategory} from "../redux/reducers/filters";
 
 function DeliveryBlock(props) {
     const order = useSelector(({basket}) => basket.items);
-    const orderAddress = useSelector(({order}) => order.items);
-    const orderBool = useSelector(({order}) => order.bool)
+    // const orderAddress = useSelector(({order}) => order.items);
+    // const orderBool = useSelector(({order}) => order.bool)
     const [activeType, setActiveType] = useState(true);
     const dispatch = useDispatch()
 
     const onSelectBtnDelivery = () => {
         setActiveType(true);
         dispatch(setCategory(null))
+        dispatch(clearBasket())
     };
 
     const onSelectBtnPickup = () => {
         setActiveType(false);
         dispatch(setCategory(true))
+        dispatch(clearBasket())
     };
-
-    const fetchSort = () => {
-
-    }
 
     const formik = useFormik({
         initialValues: {
@@ -99,7 +97,7 @@ function DeliveryBlock(props) {
                             </div>
                         </form>
                     </div>
-                    : <div onClick={fetchSort()}>Самовывоз</div>}
+                    : <div>Самовывоз</div>}
                 <div className="delivery__btn">
                     <button
                         onClick={onSelectBtnDelivery}

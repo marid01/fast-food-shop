@@ -1,6 +1,7 @@
 import React from 'react';
+import {useSelector} from "react-redux";
 
-function ButtonBasket({id, onClick, addedCount, onMinusItem, setButtonStatus}) {
+function ButtonBasket({id, onClick, onMinusItem, setButtonStatus, addedCount}) {
     const handleMinusItem = () => {
         onMinusItem(id)
         if(addedCount === 1) {

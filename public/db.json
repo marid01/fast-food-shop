@@ -1,5 +1,5 @@
 {
-  "burger": [
+  "items": [
     {
       "id": 0,
       "name": "Классический бургер",
@@ -18,7 +18,7 @@
       "id": 2,
       "name": "Бургер бруклин",
       "price": 640,
-      "delivery": false,
+      "delivery": true,
       "img": "img/burger/1.png"
     },
     {
@@ -46,11 +46,9 @@
       "id": 6,
       "name": "Чикаго",
       "price": 560,
-      "delivery": true,
+      "delivery": false,
       "img": "img/burger/1.png"
-    }
-  ],
-  "twister": [
+    },
     {
       "id": 7,
       "name": "Твистер-1",
@@ -62,7 +60,7 @@
       "id": 8,
       "name": "Твистер-2",
       "price": 200,
-      "delivery": true,
+      "delivery": false,
       "img": "img/twister/1.png"
     },
     {
@@ -76,16 +74,14 @@
       "id": 10,
       "name": "Твистер-4",
       "price": 333,
-      "delivery": true,
+      "delivery": false,
       "img": "img/twister/1.png"
-    }
-  ],
-  "chicken": [
+    },
     {
       "id": 11,
       "name": "Курица-1",
       "price": 440,
-      "delivery": true,
+      "delivery": false,
       "img": "img/chicken/1.png"
     },
     {
@@ -99,7 +95,7 @@
       "id": 13,
       "name": "Курица-3",
       "price": 440,
-      "delivery": true,
+      "delivery": false,
       "img": "img/chicken/1.png"
     },
     {
@@ -168,5 +164,3 @@
     }
   ]
 }
-
-
