@@ -1,20 +1,56 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import Button from "../Button";
+import ButtonBasket from "../ButtonBasket";
+import {useDispatch, useSelector} from "react-redux";
+import {minusBasketItem} from "../../redux/reducers/basket";
 
-function ChickenBlock({name, img, price}) {
+function ChickenBlock ({id, name, img, price, onClickAddItems, addedCount}) {
+    const dispatch = useDispatch()
+    const order = useSelector(({basket}) => basket.items);
+    const [buttonStatus, setButtonStatus] = useState(true)
+    const changeButtonStatus = (boolean) => {
+        setButtonStatus(boolean)
+    }
 
+    useEffect(() => {
+        if (Object.keys(order).length === 0) {
+            setButtonStatus(true)
+        }
+    },[order])
+
+    const onAddItems = () => {
+        const obj = {
+            id,
+            name,
+            price,
+        };
+        onClickAddItems(obj);
+    }
+
+    const onMinusItem = (id) => {
+        dispatch(minusBasketItem(id));
+    };
     return (
         <div className="chicken-block">
             <div className="container">
-                <div className="chicken-block__image-wrapper"><img className="chicken-block__image" src={img} alt="Бургер"/></div>
-                <h4>{name}</h4>
+                <div className="chicken-block__inner">
+                    <img className="chicken-block__image" src={img} alt="Бургер"/>
+                    <h4>{name}</h4>
+                    <div className="chicken-block__price">{price}</div>
+                    {buttonStatus ?
+                        <Button onAddItems={onAddItems} changeButtonStatus={changeButtonStatus}/>
+                        : <ButtonBasket
+                            id={id}
+                            onClick={onAddItems}
+                            onMinusItem={onMinusItem}
+                            addedCount={addedCount}
+                            setButtonStatus={setButtonStatus}/>
+                    }
+                </div>
             </div>
-            <button className="button">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 3C9 2.44772 8.55228 2 8 2C7.44772 2 7 2.44772 7 3V7H3C2.44772 7 2 7.44772 2 8C2 8.55228 2.44772 9 3 9H7V13C7 13.5523 7.44772 14 8 14C8.55228 14 9 13.5523 9 13V9H13C13.5523 9 14 8.55228 14 8C14 7.44772 13.5523 7 13 7H9V3Z" fill="black"/>
-                </svg>
-            </button>
         </div>
     );
 }
 
-export default ChickenBlock;
+export default ChickenBlock
+

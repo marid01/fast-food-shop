@@ -97,7 +97,6 @@ function Home() {
                         <div className="content__items-burger__inner">
                             {burgers?.map((obj) => {
                                 return <BurgerBlock
-                                    // key={obj.id}
                                     onClickAddItems={handleAddItemsToBasket}
                                     addedCount={basketItems[obj.id] && basketItems[obj.id].items.length}
                                     {...obj}/>
@@ -109,7 +108,10 @@ function Home() {
                     <div className="container">
                         <div className="content__items-twister__inner">
                             {twister?.map((obj) => {
-                                return <TwisterBlock {...obj}/>
+                                return <TwisterBlock
+                                    onClickAddItems={handleAddItemsToBasket}
+                                    addedCount={basketItems[obj.id] && basketItems[obj.id].items.length}
+                                    {...obj}/>
                             })}
                         </div>
                     </div>
@@ -118,7 +120,10 @@ function Home() {
                     <div className="container">
                         <div className="content__items-chicken__inner">
                             {chicken?.map((obj) => {
-                                return <ChickenBlock {...obj}/>
+                                return <ChickenBlock
+                                    onClickAddItems={handleAddItemsToBasket}
+                                    addedCount={basketItems[obj.id] && basketItems[obj.id].items.length}
+                                    {...obj}/>
                             })}
                         </div>
                     </div>

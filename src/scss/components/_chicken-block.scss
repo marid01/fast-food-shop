@@ -13,6 +13,12 @@
   width: 288px;
   height: 360px;
   transition: transform .3s;
+  position: relative;
+  .button {
+    position: absolute;
+    top: 150px;
+    right: 47px;
+  }
   &:hover {
     background-color: #FFFFFF;
     .chicken-block__image {
