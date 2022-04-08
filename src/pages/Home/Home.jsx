@@ -25,7 +25,7 @@ function Home() {
 
     const getBurgers = useCallback(() => {
         const cat = itemsCategory[0]?.products
-        const arrBurger = itemsBurger.filter(({id}) => cat?.includes(id)) || []
+        const arrBurger = itemsBurger.filter(({id}) => cat?.includes(id))
 
             setBurgers(arrBurger)
         }, [itemsBurger, itemsCategory])
@@ -36,7 +36,7 @@ function Home() {
 
     const getTwister = useCallback(() => {
         const cat = itemsCategory[1]?.products
-        const arrTwister = itemsBurger.filter(({id}) => cat?.includes(id)) || []
+        const arrTwister = itemsBurger.filter(({id}) => cat?.includes(id))
 
         setTwister(arrTwister)
     }, [itemsBurger, itemsCategory])
@@ -47,7 +47,7 @@ function Home() {
 
     const getChicken = useCallback(() => {
         const cat = itemsCategory[2]?.products
-        const arrChicken = itemsBurger.filter(({id}) => cat?.includes(id)) || []
+        const arrChicken = itemsBurger.filter(({id}) => cat?.includes(id))
 
         setChicken(arrChicken)
     }, [itemsBurger, itemsCategory])
