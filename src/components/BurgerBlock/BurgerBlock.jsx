@@ -4,7 +4,7 @@ import ButtonBasket from "../ButtonBasket";
 import {useDispatch, useSelector} from "react-redux";
 import {minusBasketItem} from "../../redux/reducers/basket";
 
-function BurgerBlock({id, name, img, price, onClickAddItems, addedCount}) {
+function BurgerBlock({id, hit, newProducts, name, img, price, onClickAddItems, addedCount}) {
     const dispatch = useDispatch()
     const order = useSelector(({basket}) => basket.items);
     const [buttonStatus, setButtonStatus] = useState(true)
@@ -35,6 +35,8 @@ function BurgerBlock({id, name, img, price, onClickAddItems, addedCount}) {
         <div className="burger-block">
             <div className="container">
                 <div className="burger-block__inner">
+                    {hit && <div className="hit">Хит</div>}
+                    {newProducts && <div className="newProducts">Новое</div>}
                     <img className="burger-block__image" src={img} alt="Бургер"/>
                     <h4>{name}</h4>
                     <div className="burger-block__price">{price}₽</div>

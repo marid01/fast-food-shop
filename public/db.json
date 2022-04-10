@@ -5,14 +5,16 @@
       "name": "Классический бургер",
       "price": 440,
       "delivery": false,
-      "img": "img/burger/1.png"
+      "img": "img/burger/1.png",
+      "newProducts": true
     },
     {
       "id": 1,
       "name": "Бургер 4 сыра",
       "price": 540,
       "delivery": true,
-      "img": "img/burger/1.png"
+      "img": "img/burger/1.png",
+      "hit": true
     },
     {
       "id": 2,
@@ -40,7 +42,8 @@
       "name": "Ронни",
       "price": 480,
       "delivery": true,
-      "img": "img/burger/1.png"
+      "img": "img/burger/1.png",
+      "hit": true
     },
     {
       "id": 6,
@@ -54,42 +57,48 @@
       "name": "Твистер-1",
       "price": 350,
       "delivery": true,
-      "img": "img/twister/1.png"
+      "img": "img/twister/1.png",
+      "hit": true
     },
     {
       "id": 8,
       "name": "Твистер-2",
       "price": 200,
       "delivery": false,
-      "img": "img/twister/1.png"
+      "img": "img/twister/1.png",
+      "hit": true
     },
     {
       "id": 9,
       "name": "Твистер-3",
       "price": 280,
       "delivery": true,
-      "img": "img/twister/1.png"
+      "img": "img/twister/1.png",
+      "hit": true
     },
     {
       "id": 10,
       "name": "Твистер-4",
       "price": 333,
       "delivery": false,
-      "img": "img/twister/1.png"
+      "img": "img/twister/1.png",
+      "newProducts": true
     },
     {
       "id": 11,
       "name": "Курица-1",
       "price": 440,
       "delivery": false,
-      "img": "img/chicken/1.png"
+      "img": "img/chicken/1.png",
+      "hit": true
     },
     {
       "id": 12,
       "name": "Курица-2",
       "price": 440,
       "delivery": true,
-      "img": "img/chicken/1.png"
+      "img": "img/chicken/1.png",
+      "hit": true
     },
     {
       "id": 13,

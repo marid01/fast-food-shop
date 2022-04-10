@@ -13,21 +13,22 @@ function Footer(props) {
                     <div className="section__item">
                         <ul>
                             <div className="section-title">Раздел 1</div>
-                            <li>Подраздел</li>
-                            <li>Подраздел</li>
-                            <li>Подраздел</li>
-                            <li>Подраздел</li>
-                            <li>Подраздел</li>
+                            <li><a href="#">Подраздел</a></li>
+                            <li><a href="#">Подраздел</a></li>
+                            <li><a href="#">Подраздел</a></li>
+                            <li><a href="#">Подраздел</a></li>
+                            <li><a href="#">Подраздел</a></li>
+
                         </ul>
                     </div>
                     <div className="section__item">
                         <ul>
                             <div className="section-title">Раздел 1</div>
-                            <li>Подраздел</li>
-                            <li>Подраздел</li>
-                            <li>Подраздел</li>
-                            <li>Подраздел</li>
-                            <li>Подраздел</li>
+                            <li><a href="#">Подраздел</a></li>
+                            <li><a href="#">Подраздел</a></li>
+                            <li><a href="#">Подраздел</a></li>
+                            <li><a href="#">Подраздел</a></li>
+                            <li><a href="#">Подраздел</a></li>
                         </ul>
                     </div>
                 </div>
@@ -40,22 +41,21 @@ function Footer(props) {
                     <div className="section__item">
                         <ul>
                             <div className="section-title">Раздел 1</div>
-
-                            <li>Подраздел</li>
-                            <li>Подраздел</li>
-                            <li>Подраздел</li>
-                            <li>Подраздел</li>
-                            <li>Подраздел</li>
+                            <li><a href="#">Подраздел</a></li>
+                            <li><a href="#">Подраздел</a></li>
+                            <li><a href="#">Подраздел</a></li>
+                            <li><a href="#">Подраздел</a></li>
+                            <li><a href="#">Подраздел</a></li>
                         </ul>
                     </div>
                     <div className="section__item">
                         <ul>
                             <div className="section-title">Раздел 1</div>
-                            <li>Подраздел</li>
-                            <li>Подраздел</li>
-                            <li>Подраздел</li>
-                            <li>Подраздел</li>
-                            <li>Подраздел</li>
+                            <li><a href="#">Подраздел</a></li>
+                            <li><a href="#">Подраздел</a></li>
+                            <li><a href="#">Подраздел</a></li>
+                            <li><a href="#">Подраздел</a></li>
+                            <li><a href="#">Подраздел</a></li>
                         </ul>
                     </div>
                 </div>
