@@ -36,14 +36,14 @@ export default products;
 
 
 export const fetchBurger = (delivery) => (dispatch) => {
-    axios.get(`http://localhost:3001/items?${delivery !== null ? `delivery=${delivery}` : '' } `)
+    axios.get(`/items?${delivery !== null ? `delivery=${delivery}` : '' } `)
         .then(({ data }) => {
             dispatch(setBurger(data));
         });
 };
 
 export const fetchCategories = () => (dispatch) => {
-    axios.get("http://localhost:3001/categories")
+    axios.get(`/categories`)
         .then(({ data }) => {
             dispatch(setCategories(data));
         });
