@@ -36,7 +36,7 @@ function ChickenBlock ({id, name, img, price, onClickAddItems, addedCount}) {
                 <div className="chicken-block__inner">
                     <img className="chicken-block__image" src={img} alt="Бургер"/>
                     <h4>{name}</h4>
-                    <div className="chicken-block__price">{price}</div>
+                    <div className="chicken-block__price">{price}₽</div>
                     {buttonStatus ?
                         <Button onAddItems={onAddItems} changeButtonStatus={changeButtonStatus}/>
                         : <ButtonBasket

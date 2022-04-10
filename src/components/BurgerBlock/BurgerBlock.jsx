@@ -37,7 +37,7 @@ function BurgerBlock({id, name, img, price, onClickAddItems, addedCount}) {
                 <div className="burger-block__inner">
                     <img className="burger-block__image" src={img} alt="Бургер"/>
                     <h4>{name}</h4>
-                    <div className="burger-block__price">{price}</div>
+                    <div className="burger-block__price">{price}₽</div>
                     {buttonStatus ?
                         <Button onAddItems={onAddItems} changeButtonStatus={changeButtonStatus}/>
                         : <ButtonBasket

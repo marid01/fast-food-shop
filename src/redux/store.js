@@ -1,16 +1,12 @@
 import {createStore, compose, applyMiddleware, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
-import burger from "./reducers/burger";
-import twister from "./reducers/twister";
-import chicken from "./reducers/chicken";
+import products from "./reducers/products";
 import basket from "./reducers/basket"
 import order from "./reducers/order"
 import filters from "./reducers/filters";
 
 const rootReducer = combineReducers({
-    burger,
-    twister,
-    chicken,
+    products,
     basket,
     order,
     filters

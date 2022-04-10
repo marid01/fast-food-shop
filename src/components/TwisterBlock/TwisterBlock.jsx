@@ -37,7 +37,7 @@ function TwisterBlock({id, name, img, price, onClickAddItems, addedCount}) {
                 <div className="twister-block__inner">
                     <img className="twister-block__image" src={img} alt="Твистер"/>
                     <h4>{name}</h4>
-                    <div className="twister-block__price">{price}</div>
+                    <div className="twister-block__price">{price}₽</div>
                     {buttonStatus ?
                         <Button onAddItems={onAddItems} changeButtonStatus={changeButtonStatus}/>
                         : <ButtonBasket

@@ -1,0 +1,47 @@
+.menu {
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 100;
+}
+
+.mainMenu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+
+  li + li {
+    margin-left: 20px;
+  }
+  a {
+    position: relative;
+    padding-bottom: 18px;
+    &.active {
+      background-color: transparent;
+      color: #E4002B;
+    }
+    &.active:before {
+      position: absolute;
+      left: 0;
+      content: "";
+      height: 2px;
+      background: #f9004d;
+      transition: 0.3s;
+      bottom: -1px;
+      width: 100%;
+    }
+  }
+}
+
+.menuItem {
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer;
+  color: #9D9D9D;
+
+}
+
+

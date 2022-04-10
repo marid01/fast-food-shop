@@ -1,8 +1,6 @@
-@import 'fonts';
-@import 'vars';
-//@import "normalize";
-@import "global";
-@import "components/all";
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Barlow Condensed', sans-serif;
@@ -19,3 +17,21 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.button {
+  width: 40px;
+  height: 40px;
+  line-height: 0;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+
+@import 'fonts';
+@import 'vars';
+@import "components/all";
+
+
+
